@@ -7,7 +7,7 @@
 var http = require('http');
 var url = require('url');
 
- // Configure the server to respond to all requests with a string
+ // Configure the server to respond to all requests with a JSON message
 var server = http.createServer(function(req,res){
 
   // Parse the url
@@ -33,7 +33,7 @@ var server = http.createServer(function(req,res){
   res.writeHead(statusCode);
   res.end(message);
 
-  // Log the request/response
+  // Log the request
   console.log('Request received on path: '+trimmedPath);
 });
 
